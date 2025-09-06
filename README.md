@@ -31,116 +31,31 @@
    - clsx for conditional class names
    - Vitest + @testing-library/react for unit tests
    - Browser APIs: ResizeObserver (used for dynamic header measurement)
-   - Netlify Serverless Functions (for secure API calls)
 
 4. **Installation & Setup**
    - Prerequisites:
      - Node.js (v16+ recommended), npm or pnpm
    - Open the project folder on your machine:
-     - `d:\lendsqr\lendsqr-assessment`
+     - d:\lendsqr\lendsqr-assessment
    - Install dependencies:
-     ```sh
-     npm install
-     # or
-     pnpm install
-     ```
-   - Run in development (frontend only):
-     ```sh
-     npm run dev
-     ```
+     - npm install
+     - or pnpm install
+   - Run in development:
+     - npm run dev
    - Build for production:
-     ```sh
-     npm run build
-     ```
+     - npm run build
    - Preview production build:
-     ```sh
-     npm run preview
-     ```
+     - npm run preview
    - Run unit tests:
-     ```sh
-     npm run test
-     npm run test:watch
-     ```
+     - npm run test
+     - npm run test:watch (watch mode)
 
-5. **Serverless Functions with Netlify**
-   - Functions are used as a secure backend layer for fetching API data with authorization keys **kept on the server side**.
-   - **Folder structure**:
-     ```
-     netlify/
-       functions/
-         fetchUser.ts
-     ```
-   - **Example function** (`netlify/functions/fetchUser.ts`):
-     ```ts
-     import type { Handler } from "@netlify/functions";
-
-     export const handler: Handler = async () => {
-       try {
-         const response = await fetch(
-           "https://api.json-generator.com/templates/BNHHyXQHClhi/data",
-           {
-             headers: {
-               Authorization: `Bearer ${process.env.USERS_DATA_API}`,
-               "Content-Type": "application/json",
-             },
-           }
-         );
-
-         const data = await response.json();
-
-         return {
-           statusCode: response.status,
-           body: JSON.stringify(data),
-         };
-       } catch (error: any) {
-         return {
-           statusCode: 500,
-           body: JSON.stringify({ error: error.message }),
-         };
-       }
-     };
-     ```
-   - **Configuration (`netlify.toml`)**:
-     ```toml
-     [build]
-       command = "pnpm build"
-       publish = "dist"
-
-     [functions]
-       directory = "netlify/functions"
-       node_bundler = "esbuild"
-     ```
-   - **Running locally**:
-     ```sh
-     netlify dev
-     ```
-     This starts both the Vite frontend (http://localhost:5173) and Netlify functions (http://localhost:8888).
-   - **Frontend usage**:
-     ```ts
-     const response = await fetch("/.netlify/functions/fetchUser");
-     const data = await response.json();
-     ```
-
-   - **Environment variables**:
-     - **Never commit secrets or your `.env` file to version control.**
-     - Create a `.env` file locally (this file should NOT be committed):
-       ```
-       USERS_DATA_API=your_api_key_here
-       ```
-     - You may use the provided `.env.example` file as a template (do not put real secrets in `.env.example`).
-     - For production, **set secrets using the Netlify UI** (Site settings → Environment variables) — do not store secrets in code or in the repo.
-     - Netlify auto-injects these on build & deploy.
-   - Note: You **do not need to expose keys** in frontend code — they stay private on the Netlify backend.
-
-   > ⚠️ **Warning:** Never commit real secrets or your `.env` file to the repository. Use `.env.example` for structure only. All production secrets must be set via Netlify's environment variable settings.
-
-6. **Project Structure**
+5. **Project Structure**
    - Top-level files:
      - README.md — this file
      - package.json — scripts & dependencies
      - tsconfig.json — TypeScript configuration
      - vite.config.ts — Vite configuration
-     - netlify.toml — Netlify build & function config
    - src/
      - App.tsx — routing and initial bootstrap
      - main.tsx — app entry
@@ -155,47 +70,52 @@
        - UserList/ — UserList.tsx, UserList.module.scss, UserList.test.tsx
        - UserDetails/ — UserDetalls.tsx, UserDetails.module.scss, UserDetails.test.tsx
    - public/ — static files served by Vite (if present)
+   - Notes:
+     - Navigation data: src/components/SideBar/SideNavData.tsx
+     - Tests live alongside components/pages with deterministic fixtures where needed.
 
-7. **Testing**
+6. **Testing**
    - What was tested:
      - Login form validation and inline error banner behavior.
      - Navigation flows and useNavigate mocking for route assertions.
      - Rendering of core components (Dashboard, UserList, UserDetails).
      - Responsive behaviors via mocked breakpoints in tests.
    - How to run tests:
-     ```sh
-     npm run test
-     npm run test:watch
-     ```
+     - npm run test
+     - npm run test:watch
    - Test tooling:
-     - Vitest with @testing-library/react; see `src/setupTests.ts`.
+     - Vitest with @testing-library/react; see src/setupTests.ts for global test setup.
 
-8. **Design Considerations**
+7. **Design Considerations**
    - Accessibility:
-     - Semantic HTML, alt text for icons and roles for alert regions; aria attributes added where applicable.
+     - Semantic HTML, alt text for icons and roles for alert regions; aria attributes added to interactive controls where applicable.
    - Responsiveness:
-     - SCSS modules + react-responsive runtime detection.
+     - SCSS modules include breakpoint-specific rules; runtime breakpoint detection uses react-responsive.
    - Component reusability:
-     - Shared components in `src/components`.
+     - Reusable components live in src/components to enable composition and easier testing.
    - Error handling:
-     - Inline error banners with constrained max-height.
+     - Inline error banners with constrained max-height and internal scrolling to avoid layout shifts; controlled navigation prevents unvalidated redirects.
    - Pixel fidelity:
-     - Figma values preserved in SCSS; dynamic offsets used.
+     - Figma pixel values preserved in SCSS; dynamic header/sidebar offsets measured at runtime to avoid brittle hardcoded offsets.
 
-9. **Challenges & Solutions**
-   - Sidebar clipping on mobile → fixed with ResizeObserver & dynamic inline styles.
-   - Header overlap with content → fixed with runtime height calculation and padding adjustments.
+8. **Challenges & Solutions**
+   - Sidebar clipping on mobile:
+     - Cause: fixed/relative positioning combined with max-height and padding pushed last items out of view.
+     - Fix: measure header bottom at runtime (ResizeObserver) and set mobile sidebar top/height inline; let inner .SideMenu handle overflow with overflow-y:auto and avoid max-height caps. Use padding-bottom instead of last-child margins to avoid clipping.harness.
+   - Header overlap with content:
+     - Cause: fixed header overlaying following content with varying heights.
+     - Fix: compute header height and expose via SCSS variable or inline offsets; use padding-top or top values derived at runtime.
 
-10. **Future Improvements**
-   - Replace mock data with real API.
-   - Add e2e tests (Cypress/Playwright).
-   - Storybook + visual regression tests.
-   - Accessibility audit and keyboard-only flows.
-   - Role-based access control and real auth.
+9. **Future Improvements**
+   - Replace localStorage mock data with a real paginated API backend.
+   - Add end-to-end tests (Playwright/Cypress) to cover full user flows.
+   - Introduce Storybook and visual regression tests.
+   - Improve accessibility audit (automated axe checks) and add keyboard-only navigation tests.
+   - Add role-based access control and server-side authentication.
 
-11. **Screenshots / Demo**
+10. **Screenshots / Demo**
 
-- Live sample image:  
+- Live sample image:
   ![Live sample screenshot](src/assets/live-sample.png)
 
 - Live demo: [https://olawale-dayo-ibrahim-lendsqr-fe-test.netlify.app](https://olawale-dayo-ibrahim-lendsqr-fe-test.netlify.app)
@@ -204,10 +124,11 @@
 
 Quick tester credentials
 
-- Email: `admin@admin.com`  
+- Email: `admin@admin.com`
 - Password: `Test`
 
 Key files referenced
+
 - src/App.tsx — routing and bootstrap
 - src/pages/Login/Login.tsx — login UI & logic
 - src/pages/Dashboard/Dashboard.tsx — header & mobile sidebar logic
