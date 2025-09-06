@@ -1,0 +1,537 @@
+$primary-color: #39cdcc;
+$wlc-color: #213f7d;
+$sub-head-color: #545f7d;
+$fonts: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+
+body {
+  margin: 0;
+}
+
+.MainLoad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.boxLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  span {
+    width: 10px;
+    height: 10px;
+    background-color: #213f7d;
+    animation: bounce 0.6s infinite ease-in-out;
+  }
+
+  span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(1.7);
+  }
+}
+
+.LoginContainer {
+  display: flex;
+  font-family: $fonts;
+  height: 900px;
+}
+
+.PabloIcon {
+  width: 600px;
+  height: 337.56939697265625px;
+}
+
+.Icons {
+  width: 736px;
+  display: flex;
+  flex-direction: column;
+  gap: 85px;
+  padding-top: 106px;
+  padding-left: 67px;
+}
+
+.LendsqrLogo {
+  width: 173.76473999023438px;
+  height: 36px;
+}
+
+.LoginWrapper {
+  padding-left: 100px;
+  width: 704px;
+  box-shadow: 0px 15px 90px 0px #00000008;
+  padding-top: 106px;
+}
+
+.LoginWrapper h1 {
+  font-family: $fonts;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -4%;
+  color: $wlc-color;
+  margin-bottom: 15px;
+}
+
+.LoginWrapper h2 {
+  height: 28px;
+  color: $sub-head-color;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-top: 5px;
+  margin-bottom: 60px;
+}
+/* Inline error banner shown above the form */
+.FormError {
+  background: #fff1f0; /* light red background */
+  color: #b42318; /* error text */
+  border: 1px solid #f5c6cb;
+  border-left: 4px solid #e11d48; /* emphasis */
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.2;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 447px;
+  max-height: 88px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Input field style when there's an error */
+.InputFieldError {
+  border-color: #e11d48 !important;
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.06);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.InputField {
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid #545f7d26;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 447px;
+  box-sizing: border-box;
+}
+
+.InputField::placeholder {
+  height: 20px;
+  opacity: 0.6;
+  color: #545f7d;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ViewPass {
+  position: absolute;
+  color: $primary-color;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-align: center;
+  text-transform: uppercase;
+  left: 431px;
+  cursor: pointer;
+}
+
+.LoginButton {
+  width: 100%;
+  max-width: 447px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: $primary-color;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.ForgotPassButton {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-transform: uppercase;
+  width: 147px;
+  height: 17px;
+  color: $primary-color;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+/* === Media Queries === */
+
+@media (max-width: 1366px) {
+  .Icons {
+    width: 698px;
+    gap: 80.6px;
+    padding-top: 100.5px;
+    padding-left: 63.5px;
+  }
+
+  .LoginWrapper {
+    width: 667.8px;
+    padding-left: 94.9px;
+    padding-top: 100.5px;
+  }
+
+  .LoginWrapper h1 {
+    font-size: 37.94px;
+  }
+
+  .LoginWrapper h2 {
+    font-size: 18.97px;
+    margin-bottom: 56.9px;
+  }
+  .FormError {
+    font-size: 13px;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    max-width: 424px;
+    max-height: 80px;
+  }
+  .InputField {
+    height: 47.43px;
+    border-radius: 4.74px;
+    max-width: 424px;
+    padding: 0 15.18px;
+  }
+
+  .InputField::placeholder {
+    font-size: 11.38px;
+  }
+
+  .LoginButton {
+    width: 424px;
+    height: 45.1px;
+    font-size: 13.28px;
+    border-radius: 7.59px;
+  }
+
+  .ViewPass {
+    left: 60%;
+    font-size: 11.38px;
+  }
+
+  .PabloIcon {
+    width: 569px;
+    height: 320px;
+  }
+
+  .ForgotPassButton {
+    font-size: 11.38px;
+    width: 139.44px;
+    height: 16.13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .LoginContainer {
+    flex-direction: row;
+    height: auto;
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0;
+    box-sizing: border-box;
+    gap: 20px;
+  }
+
+  .Icons {
+    width: 80vw;
+    min-width: 0;
+    max-width: 720px;
+    padding: 36px 0 0 36px;
+    gap: 56px;
+  }
+
+  .PabloIcon {
+    width: 480px;
+    height: 270px;
+  }
+
+  .LendsqrLogo {
+    width: 150px;
+    height: 32px;
+  }
+
+  .LoginWrapper {
+    width: 82vw;
+    min-width: 0;
+    max-width: 720px;
+    padding-left: 64px;
+    padding-top: 88px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .LoginWrapper h1 {
+    font-size: 34px;
+    margin-bottom: 14px;
+  }
+
+  .LoginWrapper h2 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .FormError {
+    font-size: 12.5px;
+    padding: 9px 11px;
+    margin-bottom: 14px;
+    max-height: 72px;
+    max-width: 424px;
+  }
+  .InputField {
+    height: 44px;
+    border-radius: 5px;
+    max-width: 424px;
+    padding: 0 14px;
+    box-sizing: border-box;
+  }
+
+  .InputField::placeholder {
+    font-size: 11px;
+  }
+
+  .form {
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ViewPass {
+    left: 82%;
+    font-size: 11.5px;
+  }
+
+  .LoginButton {
+    width: 100%;
+    max-width: 424px;
+    height: 44px;
+    font-size: 13px;
+    border-radius: 7px;
+  }
+
+  .ForgotPassButton {
+    font-size: 11px;
+    width: 130px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .LoginContainer {
+    flex-direction: row;
+    height: auto;
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 0;
+    box-sizing: border-box;
+    gap: 16px;
+  }
+  .Icons {
+    width: 90vw;
+    min-width: 0;
+    max-width: 95vw;
+    padding: 24px 0 0 24px;
+    gap: 32px;
+  }
+  .PabloIcon {
+    width: 320px;
+    height: 180px;
+  }
+  .LendsqrLogo {
+    width: 120px;
+    height: 24px;
+  }
+  .LoginWrapper {
+    width: 95vw;
+    min-width: 0;
+    max-width: 98vw;
+    padding: 24px 8px 0 8px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .LoginWrapper h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .LoginWrapper h2 {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .FormError {
+    font-size: 11px;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    width: 100%;
+    max-height: 64px;
+  }
+
+  .InputField {
+    height: 31.25px;
+    border-radius: 3.13px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .InputField::placeholder {
+    font-size: 7.5px;
+  }
+
+  .form {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+    gap: 16px;
+  }
+
+  .ViewPass {
+    left: 85%;
+    font-size: 11.38px;
+  }
+
+  .LoginButton {
+    width: 100%;
+    height: 30px;
+    font-size: 8.75px;
+    border-radius: 5px;
+  }
+
+  .ForgotPassButton {
+    font-size: 7.5px;
+    height: 10.63px;
+  }
+}
+
+@media (max-width: 600px) {
+  .LoginContainer {
+    flex-direction: row;
+    height: auto;
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 0;
+    box-sizing: border-box;
+    gap: 8px;
+  }
+  .Icons {
+    width: 99vw;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 12px 0 0 12px;
+    gap: 16px;
+  }
+  .PabloIcon {
+    width: 180px;
+    height: 100px;
+  }
+  .LendsqrLogo {
+    width: 80px;
+    height: 16px;
+  }
+  .LoginWrapper {
+    width: 99vw;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 8px 2px 0 2px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .LoginWrapper h1 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .LoginWrapper h2 {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .FormError {
+    font-size: 10px;
+    padding: 7px 9px;
+    margin-bottom: 10px;
+    max-height: 56px;
+  }
+
+  .InputField {
+    height: 20.85px;
+    border-radius: 2.09px;
+    width: 100%;
+    padding: 0 6.67px;
+  }
+
+  .form {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+    gap: 10px;
+  }
+  .ViewPass {
+    left: 78%;
+    font-size: 8px;
+  }
+
+  .LoginButton {
+    width: 100%;
+    height: 20px;
+    font-size: 5.84px;
+    border-radius: 3.34px;
+  }
+
+  .ForgotPassButton {
+    font-size: 5px;
+    height: 7.09px;
+  }
+}

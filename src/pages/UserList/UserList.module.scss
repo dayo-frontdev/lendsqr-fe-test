@@ -1,0 +1,853 @@
+$font: "Work Sans", sans-serif;
+
+.MainLoad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.listSection {
+  width: 100%;
+  min-width: 0;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.userList {
+  width: 100%;
+  min-width: 0;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border-width: 1px;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid #213f7d0f;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  padding: 32px 30px;
+  margin: 40px 0 20px;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  min-width: 600px;
+  max-width: 100vw;
+  height: auto;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+th,
+td {
+  text-align: left;
+  word-break: break-word;
+}
+
+th {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #545f7d;
+  text-align: center;
+}
+
+.filterRow {
+  display: none;
+}
+
+.thContent {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+th button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+
+.tableRow {
+  border-bottom: 1px solid #213f7d1a;
+}
+
+.lastRow {
+  border: none;
+}
+
+td {
+  box-sizing: border-box;
+  padding: 16px 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #545f7d;
+  height: 63px;
+}
+
+.notFound span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(228, 3, 59, 0.6);
+  font-family: $font;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.active {
+  color: #39cd62;
+  background-color: rgba(57, 205, 98, 0.06);
+}
+
+.inactive {
+  color: #545f7d;
+  background-color: rgba(84, 95, 125, 0.06);
+}
+
+.pending {
+  color: #e9b200;
+  background-color: rgba(233, 178, 0, 0.06);
+}
+
+.blacklist {
+  color: #e4033b;
+  background-color: rgba(228, 3, 59, 0.06);
+}
+
+.active,
+.blacklist,
+.pending,
+.inactive {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 30px;
+  border-radius: 100px;
+  padding: 5px 10px;
+}
+
+.tableAdjust {
+  display: flex;
+  justify-content: space-between;
+  // width: 100%;
+}
+.numberListWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 27px;
+  align-items: center;
+}
+.numberListWrapper ol {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+.FilterPosition {
+  position: relative;
+}
+
+.Filter {
+  text-align: left;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  width: 270px;
+  height: auto;
+  top: 100%;
+  background: #ffffff;
+  padding: 30px 20px;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  border: 1px solid #545f7d24;
+  border-width: 1px;
+  border-radius: 4px;
+  z-index: 1110;
+}
+
+.FilterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.FilterForm div {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtIconBtn {
+  width: auto;
+  height: auto;
+  outline: none;
+}
+
+.filterIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  width: 16px; // adjust as needed
+  height: 10.67px; // adjust as needed
+  cursor: pointer;
+}
+
+.filterIcon span {
+  display: block;
+  height: 2px;
+  background: #213f7d;
+  border-radius: 1px;
+}
+
+.line1 {
+  width: 16px;
+}
+.line2 {
+  width: 10.5px;
+}
+.line3 {
+  width: 6.5px;
+}
+
+.FilterForm div label {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(84, 95, 125, 1);
+}
+
+.FilterForm div select {
+  box-sizing: border-box;
+  width: 230px;
+  height: 40px;
+  border-width: 1px;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(84, 95, 125, 1);
+  cursor: pointer;
+}
+
+.FilterForm div select,
+input {
+  box-sizing: border-box;
+  width: 230px;
+  height: 40px;
+  border-width: 1px;
+  border-radius: 8px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.FilterForm footer {
+  display: flex;
+  gap: 14px;
+}
+
+.FilterForm button {
+  width: 98px;
+  height: 40px;
+  border-width: 1px;
+  border-radius: 8px;
+}
+
+.pagination button {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(84, 95, 125, 0.6);
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pageFilter {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #545f7d;
+  color: rgba(84, 95, 125, 0.6);
+}
+
+.countPage {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  outline: none;
+  background: #213f7d1a;
+  border: none;
+  cursor: pointer;
+}
+
+.currentPage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 227px;
+  height: 30px;
+}
+
+.currentPage label {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #545f7d;
+}
+
+.currentPage span {
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #545f7d;
+}
+
+.currentPage select {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  outline: none;
+  border-color: #213f7d1a;
+  color: #213f7d;
+}
+
+.Menubutton {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.ResetButton {
+  outline: none;
+  border: 1px solid #545f7d;
+  background: #ffffff;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(84, 95, 125, 1);
+  cursor: pointer;
+}
+
+.FilterButton {
+  background: #39cdcc;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 1);
+  outline: none;
+  border: 1px solid #39cdcc;
+  cursor: pointer;
+}
+
+.FilterButton:hover {
+  background-color: rgba(57, 205, 204, 0.6);
+}
+
+.Menubutton {
+  position: relative;
+}
+.threeDotsMenu {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: auto;
+  transform: translateY(-50%) translateX(0);
+  width: 180px;
+  height: 130px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+  z-index: 1100;
+}
+
+.threeDotsMenu div {
+  box-sizing: border-box;
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  flex-direction: column;
+}
+.threeDotsMenu div button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.threeDotsMenu div button span {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #545f7d;
+}
+.threeDotsMenu div img {
+  width: 16px;
+  height: 16px;
+}
+
+td button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.threeDots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.48px; /* space between dots */
+}
+
+.threeDots span {
+  display: block;
+  width: 3.33px;
+  height: 3.33px;
+  background: #545f7d; /* or any color you want */
+  border-radius: 50%;
+}
+
+.CurrentRunning {
+  flex: 1 1 1037px;
+}
+
+.TaskName {
+  font-family: $font;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #213f7d;
+}
+
+.CardWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Card span img {
+  width: 20px;
+  height: 17.36px;
+}
+
+.Card span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.SaveUser {
+  background-color: rgba(255, 51, 102, 0.1);
+}
+
+.Users {
+  background-color: rgba(223, 24, 255, 0.1);
+}
+
+.actUser {
+  background-color: rgba(87, 24, 255, 0.1);
+}
+
+.LoanUser {
+  background-color: rgba(245, 95, 68, 0.1);
+}
+
+.action {
+  font-family: $font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #545f7d;
+}
+
+.status {
+  font-family: $font;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.Card {
+  min-width: 0;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #213f7d0f;
+  background: #ffffff;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+form div {
+  display: flex;
+  gap: 5px;
+}
+
+@media (max-width: 1366px) {
+  .userList {
+    box-sizing: border-box;
+    padding: 30.35px 28.46px; // 32px 30px → scaled
+    margin: 37.94px 0 18.97px; // 40px 20px → scaled
+  }
+
+  .FilterForm {
+    gap: 28.46px; // 30px → scaled
+  }
+
+  .FilterForm div select,
+  .FilterForm div input {
+    box-sizing: border-box;
+    width: 218.18px; // 230px → scaled
+    height: 37.94px; // 40px → scaled
+    padding: 0 9.49px; // 10px → scaled
+  }
+
+  .FilterForm button {
+    width: 92.96px; // 98px → scaled
+    height: 37.94px;
+  }
+
+  .Card {
+    width: 227.66px; // 240 * 0.9486
+    padding: 18.97px; // 20 * 0.9486
+    border-radius: 3.79px; // 4 * 0.9486
+    box-shadow: 2.85px 4.74px 18.97px 0px #0000000a; // 3, 5, 20 * 0.9486
+    box-sizing: border-box;
+  }
+
+  .action {
+    font-size: 13.28px; // 14 * 0.9486
+  }
+
+  .status {
+    font-size: 22.77px; // 24 * 0.9486
+  }
+
+  .CardWrapper {
+    flex-direction: row;
+    gap: 24.67px; // 26px → scaled
+  }
+
+  .numberListWrapper {
+    gap: 25.61px; // 27px → scaled
+  }
+
+  ol {
+    gap: 18.97px; // 20px → scaled
+  }
+
+  .countPage {
+    width: 22.77px;
+    height: 22.77px; // 24px → scaled
+  }
+
+  .currentPage {
+    width: 215.33px; // 227px → scaled
+    height: 28.46px; // 30px → scaled
+  }
+
+  .threeDotsMenu {
+    width: 170.75px; // 180px → scaled
+    height: 123.32px; // 130px → scaled
+  }
+
+  .threeDotsMenu div {
+    box-sizing: border-box;
+    padding: 18.97px; // 20px → scaled
+    gap: 9.49px; // 10px → scaled
+  }
+
+  table {
+    width: 983.82px; // 1037 * 0.9486
+    height: 548.39px; // 578 * 0.9486
+    box-sizing: border-box;
+  }
+
+  th button {
+    width: 15.18px; // 16px → scaled
+    height: 15.18px;
+    margin-right: 7.59px; // 8px → scaled
+  }
+
+  td {
+    box-sizing: border-box;
+    padding: 15.18px 0; // 16px → scaled
+    height: 59.36px; // 63px → scaled
+  }
+
+  .notFound span {
+    font-size: 18.97px; // 20 * 0.9486
+  }
+}
+
+@media (max-width: 1200px), (max-width: 900px), (max-width: 600px) {
+  .CurrentRunning {
+    width: 100% !important;
+    min-width: 0;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .userList {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 4vw;
+    margin: 16px 0 8px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .filterRow {
+    display: block;
+    position: relative;
+  }
+
+  table {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    display: block;
+    box-sizing: border-box;
+  }
+  thead {
+    display: none;
+  }
+  tbody,
+  tr {
+    display: block;
+    width: 100%;
+  }
+  tr {
+    scroll-snap-align: start;
+    margin-bottom: 18px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 8px 0;
+    font-size: 13px;
+    border: none;
+    position: relative;
+  }
+
+  .notFound {
+    display: inline;
+    text-align: center;
+  }
+
+  td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #545f7d;
+    flex: 0 0 45%;
+    text-align: left;
+    font-size: 12px;
+    padding-right: 10px;
+  }
+  .Menubutton {
+    justify-content: flex-end;
+  }
+
+  .threeDotsMenu {
+    top: 40px;
+    right: 8px;
+    left: auto;
+    transform: none;
+    min-width: 150px;
+    max-width: 200px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .action {
+    font-size: 9.96px; // 14 * 0.7111
+  }
+
+  .status {
+    font-size: 17.07px; // 24 * 0.7111
+  }
+
+  .active,
+  .blacklist,
+  .pending,
+  .inactive {
+    width: auto;
+    height: auto;
+    border-radius: 100px;
+    padding: 5px 10px;
+  }
+
+  .notFound span {
+    font-size: 14.22px; // 20 * 0.7111
+  }
+}
+
+@media (max-width: 900px) {
+  .listSection,
+  .userList {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .userList {
+    height: auto;
+  }
+
+  table {
+    width: 100%;
+    min-width: 0;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .Menubutton {
+    justify-content: flex-end;
+  }
+  .Card {
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+
+  .tableAdjust {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .CardWrapper {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+  }
+
+  .numberListWrapper {
+    width: 100%;
+    gap: 10px;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+  .action {
+    font-size: 8.75px; // 14 * 0.625
+  }
+
+  .status {
+    font-size: 15px; // 24 * 0.625
+  }
+
+  .notFound span {
+    font-size: 12.5px; // 20 * 0.625
+  }
+}
+
+@media (max-width: 600px) {
+  table {
+    width: 100%;
+    min-width: 0;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .Menubutton {
+    justify-content: flex-end;
+  }
+  .Card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+
+  .Card {
+    max-width: 150px;
+  }
+}

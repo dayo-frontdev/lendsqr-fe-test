@@ -1,0 +1,692 @@
+$fonts: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+$fontlebel: "Work Sans", sans-serif;
+
+.goBack {
+  display: flex;
+  margin-bottom: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  align-items: center;
+  gap: 13px;
+  color: rgba(84, 95, 125, 1);
+}
+
+.actionWrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.blackList {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(228, 3, 59, 1);
+  height: 40px;
+  background: none;
+  border: 1px solid rgba(228, 3, 59, 1);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.activate {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 10%;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(57, 205, 204, 1);
+  height: 40px;
+  background: none;
+  border: 1px solid rgba(57, 205, 204, 1);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.detailsHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detailsHead h1 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(33, 63, 125, 1);
+}
+
+.detailSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailsCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 1037;
+  height: 210px;
+  border-width: 1px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+  padding: 20px 20px 0;
+  margin: 40px 0 30px;
+  box-sizing: border-box;
+}
+
+.profileCard {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profileIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(33, 63, 125, 0.16);
+}
+
+.profileIcon img {
+  width: 27.92px;
+  height: 29.23px;
+  border-width: 3px;
+}
+
+.detailsNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detailsNav button {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.cardsElementWrappers,
+.rateWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.rateWrapper {
+  border-left: 1px solid rgba(84, 95, 125, 1);
+  border-right: 1px solid rgba(84, 95, 125, 1);
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+
+.infoCategory {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.GeneralInfo,
+.NullNav {
+  width: 1037px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.categories {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(33, 63, 125, 1);
+  margin: 0;
+}
+
+.labelWrapper h1 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: rgba(84, 95, 125, 0.8);
+}
+
+.labelWrapper p {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(84, 95, 125, 1);
+}
+
+.bioCategory {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(33, 63, 125, 1);
+  box-sizing: border-box;
+}
+
+.lastIndex {
+  padding: 30px 0;
+  border-bottom: none;
+  box-sizing: border-box;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.PabloIcon {
+  width: 569px;
+  height: 320.3px;
+}
+
+.NullPageDecribe,
+.goto {
+  color: rgba(228, 3, 59, 0.6);
+  font-family: $fonts;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.NullPageTaskHead {
+  font-family: $fontlebel;
+  font-weight: 500;
+  font-size: 24px;
+  color: #213f7d;
+}
+
+.goto {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.activeButton {
+  color: rgba(57, 205, 204, 1);
+  border-bottom: 1px solid rgba(57, 205, 204, 1);
+}
+
+.id {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(84, 95, 125, 1);
+  margin: 0;
+}
+
+.acc {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(33, 63, 125, 1);
+  margin: 0;
+}
+
+.UserTier {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(84, 95, 125, 1);
+  margin: 0;
+}
+
+.rate {
+  margin: 0;
+}
+
+.balnce {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(33, 63, 125, 1);
+  margin: 0;
+}
+
+.unclickButton {
+  font-family: SF Compact Text;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.Name {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(33, 63, 125, 1);
+  margin: 0;
+}
+
+@media (max-width: 1366px) {
+  .goBack {
+    margin-bottom: 24.66px;
+    gap: 12.33px;
+    font-size: 15.18px;
+  }
+
+  .actionWrapper {
+    gap: 11.38px;
+  }
+
+  .blackList,
+  .activate {
+    font-size: 13.28px;
+    height: 37.94px;
+    border-radius: 7.59px;
+  }
+
+  .detailsHead h1 {
+    font-size: 22.77px;
+  }
+
+  .detailsCard {
+    height: 199.21px;
+    padding: 18.97px 18.97px 0;
+    margin: 37.94px 0 28.46px;
+  }
+
+  .profileCard {
+    gap: 18.97px;
+  }
+
+  .profileIcon {
+    width: 94.86px;
+    height: 94.86px;
+  }
+
+  .profileIcon img {
+    width: 26.49px;
+    height: 27.73px;
+    border-width: 3px;
+  }
+
+  .detailsNav button {
+    width: 142.29px;
+    height: 27.51px;
+  }
+
+  .cardsElementWrappers,
+  .rateWrapper {
+    padding: 14.23px;
+    gap: 14.23px;
+  }
+
+  .rateWrapper {
+    padding: 14.23px 28.46px;
+  }
+
+  .GeneralInfo,
+  .NullNav {
+    width: 983.83px;
+    padding: 0 28.46px;
+  }
+
+  .categories {
+    font-size: 15.18px;
+  }
+
+  .labelWrapper h1 {
+    font-size: 11.38px;
+  }
+
+  .labelWrapper p {
+    font-size: 15.18px;
+  }
+
+  .bioCategory,
+  .lastIndex {
+    padding: 28.46px 0; // 30 * 0.9486
+  }
+
+  .id {
+    font-size: 13.28px; // 14 * 0.9486
+  }
+
+  .acc {
+    font-size: 11.38px; // 12 * 0.9486
+  }
+
+  .UserTier {
+    font-size: 13.28px; // 14 * 0.9486
+  }
+
+  .balnce {
+    font-size: 20.87px; // 22 * 0.9486
+  }
+
+  .unclickButton {
+    font-size: 15.18px; // 16 * 0.9486
+  }
+
+  .Name {
+    font-size: 20.87px; // 22 * 0.9486
+  }
+
+  .PabloIcon {
+    width: 539.7px; // 569 * 0.9486
+    height: 303.7px; // 320.3 * 0.9486
+  }
+}
+
+@media (max-width: 1024px) {
+  .detail {
+    width: 100%;
+    max-width: 100vw;
+  }
+  .GeneralInfo,
+  .NullNav {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 18px;
+  }
+  .profileCard {
+    gap: 14px;
+    align-items: center;
+  }
+  .detailsCard {
+    width: 100%;
+    max-width: 100vw;
+    padding: 14px 14px 0;
+    margin: 28px 0 20px;
+    height: auto;
+  }
+  .detailsHead h1,
+  .Name {
+    font-size: 18px;
+  }
+  .categories,
+  .labelWrapper p,
+  .UserTier,
+  .id {
+    font-size: 13px;
+  }
+  .bioCategory,
+  .lastIndex {
+    padding: 18px 0;
+  }
+  .profileIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .detailsHead h1,
+  .Name {
+    font-size: 15.64px; // 22px * 0.711
+  }
+  .categories,
+  .labelWrapper p,
+  .UserTier,
+  .id {
+    font-size: 11.38px; // 16px * 0.711
+  }
+  .labelWrapper h1,
+  .acc {
+    font-size: 8.53px; // 12px * 0.711
+  }
+
+  .balnce {
+    font-size: 15.64px; // 22px * 0.711
+  }
+  .unclickButton {
+    font-size: 11.38px; // 16px * 0.711
+  }
+
+  .detailsNav button {
+    font-size: 11.38px; // 16px * 0.711
+  }
+
+  .cardsElementWrappers,
+  .rateWrapper {
+    padding: 10.67px; // 15 * 0.7111
+    gap: 10.67px;
+  }
+
+  .profileIcon img {
+    width: 19.86px; // 27.92 * 0.7111
+    height: 20.79px; // 29.23 * 0.7111
+    border-width: 2.13px; // 3 * 0.7111
+  }
+
+  .blackList,
+  .activate {
+    font-size: 9.95px; // 14 * 0.711
+    height: 28.44px; // 40 * 0.711
+    border-radius: 5.69px; // 8 * 0.711
+  }
+
+  .goBack {
+    margin-bottom: 18.49px; // 26 * 0.7111
+    font-size: 11.38px; // 16 * 0.7111
+    gap: 9.24px; // 13 * 0.7111
+  }
+
+  .PabloIcon {
+    width: 404.9px; // 569 * 0.7111
+    height: 227.8px; // 320.3 * 0.7111
+  }
+}
+
+@media (max-width: 900px) {
+  .GeneralInfo,
+  .NullNav {
+    padding: 0 10px;
+  }
+  .profileCard {
+    gap: 10px;
+  }
+  .detailsCard {
+    padding: 10px 10px 0;
+    margin: 16px 0 10px;
+    height: auto;
+  }
+  .detailsHead h1,
+  .Name {
+    font-size: 16px;
+  }
+  .categories,
+  .labelWrapper p,
+  .UserTier,
+  .id {
+    font-size: 12px;
+  }
+  .bioCategory,
+  .lastIndex {
+    padding: 12px 0;
+  }
+  .profileIcon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profileIcon img {
+    width: 17.45px; // 27.92 * 0.625
+    height: 18.27px; // 29.23 * 0.625
+    border-width: 1.88px; // 3 * 0.625
+  }
+
+  .infoCategory {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detailsNav button {
+    font-size: 10px; // 16px * 0.625
+  }
+
+  .detailsHead h1,
+  .Name {
+    font-size: 13.75px; // 22px * 0.625
+  }
+  .categories,
+  .labelWrapper p,
+  .UserTier,
+  .id {
+    font-size: 10px; // 16px * 0.625
+  }
+  .labelWrapper h1,
+  .acc {
+    font-size: 7.5px;
+  }
+  .balnce {
+    font-size: 13.75px;
+  }
+  .unclickButton {
+    font-size: 10px;
+  }
+
+  .rateWrapper,
+  .cardsElementWrappers {
+    padding: 9.38px 18.75px;
+    gap: 9.38px 18.75px;
+  }
+
+  .goBack {
+    margin-bottom: 16.25px; // 26 * 0.625
+    font-size: 10px; // 16 * 0.625
+    gap: 8.13px; // 13 * 0.625
+  }
+
+  .blackList,
+  .activate {
+    font-size: 8.75px;
+    height: 25px;
+    border-radius: 5px;
+  }
+
+  .PabloIcon {
+    width: 355.6px; // 569 * 0.625
+    height: 200.2px; // 320.3 * 0.625
+  }
+}
+
+@media (max-width: 600px) {
+  .backArrow {
+    width: 18px;
+  }
+  .GeneralInfo,
+  .NullNav {
+    padding: 0 4px;
+    border-radius: 0;
+  }
+  .profileCard {
+    gap: 6px;
+  }
+  .profileIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .detailsCard {
+    padding: 4px 4px 0;
+    margin: 8px 0 4px;
+    height: auto;
+    border-radius: 0;
+    box-sizing: border-box;
+  }
+
+  .categories,
+  .labelWrapper p,
+  .UserTier,
+  .id {
+    font-size: 11px;
+  }
+  .bioCategory,
+  .lastIndex {
+    padding: 8px 0;
+  }
+
+  .detailsNav {
+    width: 100%;
+  }
+  .detailsNav button {
+    font-size: 10px; // 16px * 0.625
+  }
+
+  .detailsHead h1,
+  .Name {
+    font-size: 9.17px; // 22px * 0.417
+  }
+
+  .labelWrapper .acc {
+    font-size: 5px; // 12px * 0.417
+  }
+  .balnce {
+    font-size: 9.17px; // 22px * 0.417
+  }
+  .unclickButton {
+    font-size: 6.67px; // 16px * 0.417
+  }
+
+  .blackList,
+  .activate {
+    font-size: 5.84px; // 14 * 0.417
+    height: 16.68px; // 40 * 0.417
+    border-radius: 3.34px; // 8 * 0.417
+  }
+
+  .goBack {
+    margin-bottom: 10.83px; // 26 * 0.4167
+    font-size: 6.67px; // 16 * 0.4167
+    gap: 5.42px; // 13 * 0.4167
+  }
+
+  .rateWrapper,
+  .cardsElementWrappers {
+    padding: 6.25px 12.5px;
+    gap: 6.25px 12.5px;
+  }
+  .profileIcon img {
+    width: 11.64px; // 27.92 * 0.4167
+    height: 12.18px; // 29.23 * 0.4167
+    border-width: 1.25px; // 3 * 0.4167
+  }
+
+  .PabloIcon {
+    width: 237.1px; // 569 * 0.4167
+    height: 133.5px; // 320.3 * 0.4167
+  }
+}

@@ -1,0 +1,177 @@
+$text-color: #213f7d;
+$font: "Work Sans", sans-serif;
+$category-color: #545f7d;
+$font-size: 16px;
+
+.SideMenu {
+  background-color: #ffffff;
+  width: 283px;
+  height: 100%;
+  box-shadow: 0px 5px 20px 0px #0000000a;
+  margin: 0;
+  font-family: $font;
+  color: $text-color;
+}
+
+.SwitchOrg {
+  display: flex;
+  width: 206px;
+  gap: 10px;
+  margin-bottom: 52px;
+  font-size: $font-size;
+  align-items: center;
+  padding-left: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.SelectOrg {
+  background: none;
+  border: none;
+  font-family: $font;
+  color: $text-color;
+  font-size: $font-size;
+  cursor: pointer;
+}
+
+.Dashboard {
+  display: flex;
+  gap: 10px;
+  height: 19px;
+  padding-left: 30px;
+  opacity: 0.6;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.dashText {
+  font-family: $font;
+  font-size: $font-size;
+}
+
+.NavList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.NavCategory {
+  font-weight: 500;
+  font-size: 12px;
+  padding: 0 30px;
+  margin-top: 41px;
+  color: $category-color;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.NavItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  font-size: $font-size;
+  padding: 0 30px;
+  color: $text-color;
+  opacity: 0.6;
+  background: none;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.textOpacity {
+  opacity: 1;
+}
+
+.NavItem img {
+  width: 16px;
+  height: 12.8px;
+}
+
+.NavItemWrapper {
+  background-color: rgba(57, 205, 204, 0.06);
+  border-left: 3px solid #39cdcc;
+  width: 100%;
+  height: 40px;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+@media (max-width: 1366px) {
+  .SideMenu {
+    width: 268.45px;
+    padding-top: 34.29px;
+    height: 100%;
+  }
+
+  .SwitchOrg {
+    width: 100%;
+    gap: 8.79px;
+    margin-bottom: 45.72px;
+    padding: 0 26.38px;
+    font-size: 14.07px;
+  }
+
+  .SelectOrg {
+    font-size: 14.07px;
+    background-size: 11.38px 11.38px;
+    background-position: right 9.5px center;
+    // padding-right: 22px;
+  }
+
+  .Org {
+    width: 15.18px;
+    height: 15.18px;
+  }
+
+  .Dashboard {
+    gap: 8.79px;
+    height: 16.7px;
+    padding-left: 26.38px;
+  }
+
+  .dashText {
+    font-size: 14.07px;
+  }
+
+  .NavCategory {
+    font-size: 10.55px;
+    padding: 0 26.38px;
+    margin-top: 36.05px;
+  }
+
+  .NavItem {
+    gap: 8.79px;
+    height: 35.17px;
+    font-size: 14.07px;
+    padding: 0 26.38px;
+  }
+
+  .NavItem img {
+    width: 14.07px;
+    height: 11.25px;
+  }
+
+  .NavItemWrapper {
+    height: 35.17px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .SideMenu {
+    width: 201.2px; // 283 * 0.7111
+    box-shadow: 0px 3.56px 14.22px 0px #0000000a;
+    padding-top: 0;
+    // height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  .closeHamburger {
+    display: flex;
+    justify-content: right;
+    padding: 10px 10px;
+    box-sizing: border-box;
+  }
+}
