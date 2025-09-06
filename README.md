@@ -120,13 +120,19 @@
      const response = await fetch("/.netlify/functions/fetchUser");
      const data = await response.json();
      ```
+
    - **Environment variables**:
-     - Create a `.env` file (never commit to Git):
+     - **Never commit secrets or your `.env` file to version control.**
+     - Create a `.env` file locally (this file should NOT be committed):
        ```
        USERS_DATA_API=your_api_key_here
        ```
+     - You may use the provided `.env.example` file as a template (do not put real secrets in `.env.example`).
+     - For production, **set secrets using the Netlify UI** (Site settings → Environment variables) — do not store secrets in code or in the repo.
      - Netlify auto-injects these on build & deploy.
    - Note: You **do not need to expose keys** in frontend code — they stay private on the Netlify backend.
+
+   > ⚠️ **Warning:** Never commit real secrets or your `.env` file to the repository. Use `.env.example` for structure only. All production secrets must be set via Netlify's environment variable settings.
 
 6. **Project Structure**
    - Top-level files:
