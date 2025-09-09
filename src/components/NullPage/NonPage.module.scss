@@ -1,0 +1,165 @@
+$primary-color: #39cdcc;
+$wlc-color: #213f7d;
+$sub-head-color: #545f7d;
+$fonts: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+$fontlebel: "Work Sans", sans-serif;
+
+body {
+  margin: 0;
+}
+
+.PabloIcon {
+  width: 600px;
+  height: 337.56px;
+}
+
+.LoginWrapper {
+  width: 100%;
+  min-width: 0;
+  max-width: 100vw;
+  box-shadow: 0px 15px 90px 0px #00000008;
+  padding: 24px 12px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.LoginWrapper h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: $wlc-color;
+  margin-bottom: 15px;
+}
+
+.LoginWrapper h2 {
+  color: $sub-head-color;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 60px;
+}
+
+.NullPageDecribe,
+.goto {
+  color: rgba(228, 3, 59, 0.6);
+  font-family: $fonts;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.NullPageTaskHead {
+  font-family: $fontlebel;
+  font-weight: 500;
+  font-size: 24px;
+  color: #213f7d;
+}
+
+.goto {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* === Media Queries === */
+
+@media (max-width: 1366px) {
+  .PabloIcon {
+    width: 569px;
+    height: 320.3px;
+  }
+
+  .LoginWrapper {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 24px 12px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .LoginWrapper h1 {
+    font-size: 37.9px;
+    margin-bottom: 14.2px;
+  }
+
+  .LoginWrapper h2 {
+    font-size: 18.9px;
+    margin-top: 4.7px;
+    margin-bottom: 56.9px;
+  }
+
+  .NullPageDecribe,
+  .goto {
+    font-size: 18.9px;
+    margin-bottom: 14.2px;
+  }
+
+  .NullPageTaskHead {
+    font-size: 22.8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .PabloIcon {
+    width: 350px;
+    height: 197px;
+  }
+  .LoginWrapper {
+    // width: 98vw;
+    min-width: 0;
+    max-width: 99vw;
+    padding: 12px 4px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .LoginWrapper h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .LoginWrapper h2 {
+    font-size: 16px;
+    margin-top: 3px;
+    margin-bottom: 30px;
+  }
+  .NullPageDecribe,
+  .goto {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .NullPageTaskHead {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 600px) {
+  .PabloIcon {
+    width: 220px;
+    height: 124px;
+  }
+  .LoginWrapper {
+    // width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 6px 1px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .LoginWrapper h1 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .LoginWrapper h2 {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 18px;
+  }
+  .NullPageDecribe,
+  .goto {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  .NullPageTaskHead {
+    font-size: 12px;
+  }
+}
